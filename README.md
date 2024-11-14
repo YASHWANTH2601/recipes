@@ -123,4 +123,4 @@ GET /api/recipes/
 Testing: Ensure both the backend and frontend servers are running before accessing the app. You can view, add, edit, and delete recipes directly in the app.
 
 Deploy Link is here:
-https://recipes-six-khaki.vercel.app/
+<a href="https://recipes-six-khaki.vercel.app/">Recipe App</a>

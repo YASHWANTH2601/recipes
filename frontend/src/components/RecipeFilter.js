@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 function RecipeFilter({ category, setCategory, ingredient, setIngredient }) {
     return (
         <div style={{ marginBottom: '20px' }}>
@@ -23,6 +23,7 @@ function RecipeFilter({ category, setCategory, ingredient, setIngredient }) {
                     onChange={(e) => setIngredient(e.target.value)}
                 />
             </label>
+            <Link style={{ marginLeft: '20px' }} className='' to="/add">Add New Recipe</Link>
         </div>
     );
 }

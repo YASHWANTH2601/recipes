@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import RecipeFilter from './RecipeFilter';
-
+import RecipeFilter from '../RecipeFilter';
+import './index.css';
 function RecipeList() {
     const [recipes, setRecipes] = useState([]);
     const [category, setCategory] = useState('');
@@ -38,7 +38,7 @@ function RecipeList() {
     }, [category, ingredient]);
 
     return (
-        <div>
+        <div className='recipeContainer'>
             <h2>Recipes</h2>
             <RecipeFilter
                 category={category}
@@ -46,18 +46,18 @@ function RecipeList() {
                 ingredient={ingredient}
                 setIngredient={setIngredient}
             />
-            <ul>
+            <ul className='recipe-list'>
                 {recipes.map((recipe) => (
                     <Link to={`/${recipe._id}`}>
-                    <li key={recipe._id} >
-                        <p>{recipe.title}</p>
-                        <p>{recipe.category}</p>
-                        <p>{recipe.cookingTime}</p>
+                    <li className='recipe' key={recipe._id} >
+                        <p> {recipe.title}</p>
+                        <p> Category : {recipe.category}</p>
+                        <p>Cooking Time : {recipe.cookingTime}</p>
                     </li>
                     </Link>
                 ))}
             </ul>
-            <Link to="/add">Add New Recipe</Link>
+           
         </div>
     );
 }

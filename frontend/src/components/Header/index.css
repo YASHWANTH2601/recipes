@@ -1,0 +1,20 @@
+.Heading,.headingContainer{
+    display: inline;
+}
+nav{
+    
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    align-items: center;
+}
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+ul>li{
+    margin-right: 20px;
+}

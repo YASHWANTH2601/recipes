@@ -5,7 +5,7 @@ import  Recipe from '../models/Recipe.js';
 
 // GET all recipes or filter by category/ingredient
 router.get('/', async(req, res) => {
-    try {
+    try { 
         const { category, ingredient } = req.query;
         const query = {};
 
